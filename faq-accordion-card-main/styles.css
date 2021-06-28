@@ -12,6 +12,8 @@
 * {
   box-sizing: border-box;
 }
+
+/* The gradient in the background */
 body {
   margin: 0;
   padding: 0;
@@ -25,6 +27,7 @@ body {
   background-size: cover;
   background-position: center;
 }
+/* For centering the card */
 .full-screen-container {
   width: 100vw;
   height: 100vh;
@@ -32,12 +35,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+/* The yellow box but I am not using it; placing it properly seems impossible */
 .img__out {
   z-index: 100;
   position: fixed;
   left: 2.5rem;
   top: 17rem;
 }
+/* The card itself */
 .container {
   width: 90%;
   max-width: 80vw;
@@ -49,7 +54,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-areas: "illustration content";
 }
-
+/* The illustration to the left */
 .illustration {
   grid-area: illustration;
   display: grid;
@@ -59,6 +64,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+/* The images used in the illustration, one in the bottom and the other at the top */
 .img__bottom {
   position: absolute;
   top: -20rem;
@@ -70,6 +76,7 @@ body {
   position: relative;
   left: -5rem;
 }
+/* The faqs to the right */
 .faqs {
   grid-area: content;
   align-self: center;
@@ -82,17 +89,20 @@ body {
   width: 90%;
   font-size: 1.1em;
 }
+/* The FAQ heading */
 .heading {
   color: var(--txt-dark);
   text-transform: uppercase;
   font-size: 2.7rem;
 }
+/* Removing the styles of the ul used for faqs*/
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 100%;
 }
+/* Each question and answer is stored in an li */
 ul li {
   margin-bottom: 1rem;
   border-bottom: 1px solid hsl(240, 6%, 50%);
@@ -102,16 +112,19 @@ ul li {
   grid-template-rows: 2;
   grid-template-areas: "question" "answer";
 }
+/* The question div in li */
 .question {
   grid-area: question;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
+/* The arrow pointing up or down  */
 .question img {
   color: var(--txt-red);
   /* transform: scale(0.7); */
 }
+/* The div for the answer  */
 .answer {
   color: var(--txt-n-dgb);
   font-size: 0.7rem;
